@@ -1,0 +1,205 @@
+:root {
+    --gradientes-gradiente-hover: linear-gradient(90deg, #9F55FF 0%, #FF46B9 100%);
+    --cores-cinza-dark: #1E1F28;
+    --gradientes-gradiente-normal: linear-gradient(90deg, #8323FF 0%, #FF2DAF 100%);
+    --cores-branco: #FFF;
+    --gradientes-gradiente-normal:linear-gradient(90deg, #8323FF 0%, #FF2DAF 100%);
+    --cores-amarelo: #FEEA35
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: var(--gradientes-gradiente-hover);
+}
+  
+  .main {
+    max-width: 90%; /* ajuste para a largura que preferir */
+    display: flex;
+    padding: 64px 96px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    background: var(--cores-cinza-dark);
+    box-shadow: 0px -3px 22px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 16px;
+  }
+
+h1{
+    font-size: 30px;
+    font-style: normal;
+    color: #9747FF;
+    width: 85.5px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+header{
+    display: flex;
+    width: 678px;
+    justify-content: space-between;
+    align-items: center;
+}
+  button{
+    display: flex;
+    padding: 10px 10px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    background: var(--gradientes-gradiente-normal);
+    color: var(--cores-branco, #FFF);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    cursor: pointer;
+  }
+
+  .imgraio{
+    position: relative;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    top: -30px;
+}
+
+  .image{
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+  .films{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 36px;
+  }
+    
+  .filme-info,.filme-info1,.filme-info2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+  .filme-info h2,.filme-info1 h2,.filme-info2 h2{
+    width: 140px;
+    color: var(--cores-branco);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 100%; /* 20px */
+    white-space: nowrap;  /* Impedir o texto de quebrar em várias linhas */
+    overflow: hidden;     /* Esconder todo o texto que excede o limite da div */
+    text-overflow: ellipsis;  /* Adicionar três pontos ao final do texto quando ele é cortado */
+    
+  }
+
+  .rating{
+    display: flex;
+    align-items: center;
+}
+
+  .estrela2{
+    margin-right: -4px;
+}
+
+  .score0,.score1,.score2{
+    font-size: 16px;
+    margin: 0;  /* Remover margem padrão */
+    color: var(--cores-amarelo);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14.408px; /* 90.049% */
+    margin-top: 1px;
+}
+  .imagens{
+    display: flex;
+    gap: 36px;
+    width: 678px;
+  }
+  .img0,.img1,.img2{
+    display: flex;
+    width: 202px;
+    height: 288.513px;
+    flex-shrink: 0;
+    border-radius: 8px;
+  }
+
+
+/* Deixar responsivo para celular ou outros dispositivos */
+  @media (max-width: 800px) {
+  
+    body {
+      flex-direction: column;
+      gap: 36px;
+      height: 100%;
+      width: 150%;
+    }
+  
+    header {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+  
+    button {
+      padding: 5px 5px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  
+    .main{
+      width: 100%;
+      height: 100%;      
+      justify-content: flex-start;
+    }
+    
+    .films {
+      flex-direction: column;
+      gap: 0px;  /* ajustado para caber melhor em telas menores */
+      justify-content: flex-start;
+      height: 100%;
+    }
+
+    .film2,.film3,.film4{
+      margin-top: 20px;
+      height: 100%;
+    }
+  
+    .filme-info,.filme-info1,.filme-info2 {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0px;
+    }
+  
+    .filme-info h2, .filme-info1 h2, .filme-info2 h2 {
+      text-align: center;
+      gap: 0px;
+    }
+  
+    .imagens {
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;  /* ajustado para caber melhor em telas menores */
+      height: 100%; /* permite que a altura se ajuste ao novo aspecto da largura */
+    }
+  
+    .img0,.img1,.img2{
+      margin-top: 0px;
+      justify-content: center;
+    }
+    
+    .rating{
+      justify-content: center; /* centraliza os itens de classificação */
+    }
+  }
+  
